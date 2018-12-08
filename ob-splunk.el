@@ -1,10 +1,8 @@
 ;;; ob-splunk.el --- org-babel functions for Splunk search
 
-;; Copyright (C) your name here
-
 ;; Author: André Peric Tavares
 ;; Keywords: literate programming, splunk
-;; Homepage: https://github.com/Andre0991
+;; Homepage: https://github.com/Andre0991/ob-splunk/
 ;; Version: 0.01
 
 ;; Usage:
