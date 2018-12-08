@@ -45,9 +45,7 @@
 
 (defun org-babel-expand-body:splunk (body params &optional processed-params)
   "Expand BODY according to PARAMS, return the expanded body."
-  (let ((expanded-body (format "(splunk-search %S)" body)))
-    (message expanded-body)
-    expanded-body))
+  (format "(splunk-search %S)" body))
 
 (defun org-babel-execute:splunk (body params)
   "Execute a block of Splunk code with org-babel.
