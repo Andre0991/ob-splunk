@@ -28,6 +28,11 @@
 
 ;;; Code:
 (require 'ob)
+(require 'url-util)
+
+;;; editable splunk src code blocks
+(unless (assoc "splunk" org-src-lang-modes)
+  (add-to-list 'org-src-lang-modes '("splunk" . funamental)))
 
 ;;; Splunk
 (defvar splunk-search-url nil
@@ -35,7 +40,7 @@
 
 (defun splunk-search (query-str)
   (if splunk-search-url
-      (browse-url (concat splunk-search-url "?q=" query-str))
+      (browse-url (concat splunk-search-url "?q=" (url-hexify-string query-str)))
     "`splunk-search-url` is not set."))
 
 ;;; Babel
